@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b7d0b39d-27af-46fb-a6e4-332bbcaf127a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Controller/DetalleReposicionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Controller/DetallesPedidoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Controller/MovimientoStockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Controller/PedidoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Controller/ProductoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Controller/ReposicionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Controller/StockController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Controller/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Request/DetallesPedidoRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Request/DetallesReposicionRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Request/MovimientoStockRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Request/PedidoRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Request/ProductoRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Request/ReposicionRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Request/StockRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Request/UsuarioRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Response/DetallesPedidoResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Response/DetallesReposicionResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Response/MovimientoStockResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Response/PedidoResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Response/ProductoResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Response/ReposicionResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Response/StockResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/DTO/Response/UsuarioResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Enums/EstadoPedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Enums/EstadoReposicion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Enums/Rol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Enums/TipoMovimiento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Exception/Producto/ProductoNoExisteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Exception/Producto/ProductoYaExisteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Mapper/DetalleReposicionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Mapper/DetallesPedidoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Mapper/MovimientoStockMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Mapper/PedidoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Mapper/ProductoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Mapper/ReposicionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Mapper/StockMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Mapper/UsuarioMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Repository/DetalleReposicionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Repository/DetallesPedidoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Repository/MovimientoStockRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Repository/PedidoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Repository/ProductoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Repository/ReposicionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Repository/StockRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Repository/UsuarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Impl/DetalleReposicionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Impl/DetallesPedidoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Impl/MovimientoStockServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Impl/PedidoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Impl/ProductoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Impl/ReposicionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Impl/StockServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Impl/UsuarioServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Interfaces/DetallesPedidoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Interfaces/DetallesReposicionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Interfaces/MovimientoStockService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Interfaces/PedidoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Interfaces/ProductoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Interfaces/ReposicionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Interfaces/StockService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Service/Interfaces/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoSupermercado/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoSupermercado/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/DetalleReposicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/DetalleReposicion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/DetallesPedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/DetallesPedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/MovimientoStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/MovimientoStock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Pedido.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Pedido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Producto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Reposicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Reposicion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoSupermercado/src/main/java/com/example/ProyectoSupermercado/Entity/Usuario.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "sonandi8053"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sonandi8053/Supermercado.git",
+    "accountId": "65839116-e89f-4154-9f64-89756cadb4d7"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="38nJP9hh8mt9SZjGQOV1xKq5TDc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b7d0b39d-27af-46fb-a6e4-332bbcaf127a" name="Changes" comment="" />
+      <created>1769429375990</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769429375990</updated>
+    </task>
+    <servers />
+  </component>
+</project>
