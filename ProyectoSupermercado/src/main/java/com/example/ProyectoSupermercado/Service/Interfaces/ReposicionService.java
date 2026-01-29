@@ -8,7 +8,6 @@ import java.util.List;
 public interface ReposicionService {
     ReposicionResponseDTO crear(ReposicionRequestDTO dto);
     void cambiarEstado(Long idReposicion);
-    void asignarReponedor(Long idUsuario);
     List<ReposicionResponseDTO>verReposiciones();
     List<ReposicionResponseDTO>verReposicionesPorReponedor(Long idReponedor);
 }

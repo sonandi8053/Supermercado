@@ -6,7 +6,7 @@ import com.example.ProyectoSupermercado.DTO.Response.DetallesReposicionResponseD
 import java.util.List;
 
 public interface DetallesReposicionService {
-    DetallesReposicionResponseDTO crear(DetallesReposicionRequestDTO dto);
+    void crear(DetallesReposicionRequestDTO dto);
     List<DetallesReposicionResponseDTO> obtenerDetallesPorReposicion(Long idReposicion);
 
 }

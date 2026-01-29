@@ -1,6 +1,7 @@
 package com.example.ProyectoSupermercado.DTO.Request;
 
 import com.example.ProyectoSupermercado.Entity.Enums.Rol;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,6 +18,7 @@ public class UsuarioRequestDTO {
     private String nombre;
     private String email;
     private String contrasenia;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate fecha_nac;
     private Rol rol;
 }

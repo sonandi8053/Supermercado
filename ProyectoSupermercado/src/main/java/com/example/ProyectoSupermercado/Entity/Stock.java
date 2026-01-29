@@ -18,6 +18,7 @@ public class Stock {
     @Id
     private Long id;
     private Integer cantidadTotal;
+    private Integer cantidadReservada;
 
     @OneToOne
     @JoinColumn(name = "producto_id", unique = true, nullable = false)

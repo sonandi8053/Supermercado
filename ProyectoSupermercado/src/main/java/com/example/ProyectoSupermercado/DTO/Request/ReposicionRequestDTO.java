@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,4 +18,5 @@ public class ReposicionRequestDTO {
     private LocalDateTime fecha;
     private EstadoReposicion estado;
     private Long idUsuario;
+    private List<DetallesReposicionRequestDTO> detallesReposicion;
 }

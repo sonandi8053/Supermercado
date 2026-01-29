@@ -5,9 +5,10 @@ import com.example.ProyectoSupermercado.DTO.Response.StockResponseDTO;
 import java.util.List;
 
 public interface StockService {
-    Integer consultarStock (Long idProducto);
-    void reservarStock (Long idProducto, Integer cantidad);
-    void incrementarStock(Long idProducto, Integer cantidad);
-    void decrementarStock(Long idProducto, Integer cantidad);
+    Integer consultarStockDisponible(Long idProducto);
+    void reservarStock (Long idProducto, Integer cantidad, Long idUsuario);
+    void incrementarStock(Long idProducto, Integer cantidad, Long idUsuario);
+    void decrementarStock(Long idProducto, Integer cantidad, Long idUsuario);
     List<StockResponseDTO>stockCritico();
+    void liberarStock(Long idProducto, Integer cantidad, Long idUsuario);
 }
