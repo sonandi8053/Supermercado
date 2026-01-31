@@ -10,5 +10,4 @@ import java.util.List;
 public interface DetallesPedidoService {
     DetallesPedido crear(DetallesPedidoRequestDTO dto, Pedido pedido);
     List<DetallesPedidoResponseDTO> obtenerDetallesPorPedido(Long idPedido);
-    Integer calcularSubTotal(Long idDetallePedido);
 }

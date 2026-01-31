@@ -6,13 +6,16 @@ import com.example.ProyectoSupermercado.DTO.Response.PedidoResponseDTO;
 import com.example.ProyectoSupermercado.Entity.DetallesPedido;
 import com.example.ProyectoSupermercado.Entity.Enums.EstadoPedido;
 import com.example.ProyectoSupermercado.Entity.Pedido;
+import com.example.ProyectoSupermercado.Entity.Producto;
 import com.example.ProyectoSupermercado.Entity.Usuario;
 import com.example.ProyectoSupermercado.Exception.Pedido.PedidoNoExisteException;
+import com.example.ProyectoSupermercado.Exception.Producto.ProductoNoExisteException;
 import com.example.ProyectoSupermercado.Exception.Usuario.UsuarioNoExisteException;
 import com.example.ProyectoSupermercado.Mapper.DetallesPedidoMapper;
 import com.example.ProyectoSupermercado.Mapper.PedidoMapper;
 import com.example.ProyectoSupermercado.Repository.DetallesPedidoRepository;
 import com.example.ProyectoSupermercado.Repository.PedidoRepository;
+import com.example.ProyectoSupermercado.Repository.ProductoRepository;
 import com.example.ProyectoSupermercado.Repository.UsuarioRepository;
 import com.example.ProyectoSupermercado.Service.Interfaces.DetallesPedidoService;
 import com.example.ProyectoSupermercado.Service.Interfaces.PedidoService;
@@ -40,6 +43,9 @@ public class PedidoServiceImpl implements PedidoService {
     @Autowired
     private DetallesPedidoRepository detallesPedidoRepository;
 
+    @Autowired
+    private ProductoRepository productoRepository;
+
     @Override
     public PedidoResponseDTO crearPedido(PedidoRequestDTO dto) {
         Pedido pedido = new Pedido();
@@ -48,10 +54,16 @@ public class PedidoServiceImpl implements PedidoService {
         Usuario usuario = usuarioRepository.findById(dto.getIdUsuario()).orElseThrow(()-> new UsuarioNoExisteException("El usuario no existe."));
         pedido.setUsuario(usuario);
         pedidoRepository.save(pedido);
+        Integer total = 0;
         for (DetallesPedidoRequestDTO detallePedido: dto.getDetallesPedidoRequestDTOS()){
             DetallesPedido detallesPedido = detallesPedidoService.crear(detallePedido, pedido);
+            detallesPedido.setPedido(pedido);
+            detallesPedidoRepository.save(detallesPedido);
             pedido.getDetalles().add(detallesPedido);
+            Producto producto = productoRepository.findById(detallePedido.getIdProductoAsociado()).orElseThrow(()-> new ProductoNoExisteException("El producto no existe."));
+            total += producto.getPrecio() * detallePedido.getCantidad();
         }
+        pedido.setTotal(total);
         pedidoRepository.save(pedido);
         usuario.getPedidos().add(pedido);
         return pedidoMapper.toDTO(pedido);

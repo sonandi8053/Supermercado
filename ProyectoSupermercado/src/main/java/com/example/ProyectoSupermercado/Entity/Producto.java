@@ -21,7 +21,7 @@ public class Producto {
     private String nombre;
     private String descripcion;
     private Integer precio;
-    private Boolean es_activo;
+    private Boolean esActivo;
 
     @OneToOne(mappedBy = "producto", cascade = CascadeType.ALL)
     private Stock stock;

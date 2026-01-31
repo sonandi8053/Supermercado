@@ -16,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Stock {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer cantidadTotal;
     private Integer cantidadReservada;

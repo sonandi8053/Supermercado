@@ -13,5 +13,5 @@ public class ProductoRequestDTO {
     private String nombre;
     private String descripcion;
     private Integer precio;
-    private Boolean es_activo;
+    private Boolean esActivo;
 }

@@ -24,13 +24,13 @@ public class UsuarioController {
         return new ResponseEntity<>(usuarioCreado, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/editar/{id}")
     public ResponseEntity<Void> editarUsuario(@PathVariable Long id, @RequestBody UsuarioRequestDTO dto) {
         usuarioService.editarUsuario(id, dto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping ("/mostrar")
     public ResponseEntity<List<UsuarioResponseDTO>> mostrarUsuarios() {
         List<UsuarioResponseDTO> usuarios = usuarioService.mostrarUsuarios();
         return new ResponseEntity<>(usuarios, HttpStatus.OK);
@@ -42,7 +42,7 @@ public class UsuarioController {
         return new ResponseEntity<>(usuarios, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/ver/{id}")
     public ResponseEntity<UsuarioResponseDTO> verPerfil(@PathVariable Long id) {
         UsuarioResponseDTO usuario = usuarioService.verPerfil(id);
         return new ResponseEntity<>(usuario, HttpStatus.OK);

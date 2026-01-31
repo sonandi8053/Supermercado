@@ -12,7 +12,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class DetallesReposicionRequestDTO {
-    private Long idReposicion;
     private Long idProducto;
     private Integer cantidad;
 }

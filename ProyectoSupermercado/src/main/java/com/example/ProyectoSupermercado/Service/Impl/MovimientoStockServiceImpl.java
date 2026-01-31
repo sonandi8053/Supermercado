@@ -36,6 +36,9 @@ public class MovimientoStockServiceImpl implements MovimientoStockService {
         MovimientoStock movimientoStock = movimientoStockMapper.toEntity(dto);
         Producto producto = productoRepository.findById(dto.getIdProducto()).orElseThrow(()-> new ProductoNoExisteException("El producto no existe."));
         Usuario usuario = usuarioRepository.findById(dto.getIdUsuario()).orElseThrow(()-> new UsuarioNoExisteException("El usuario no existe."));
+        movimientoStock.setUsuario(usuario);
+        movimientoStock.setStock(producto.getStock());
+        movimientoStockRepository.save(movimientoStock);
         producto.getStock().getMovimientosStock().add(movimientoStock);
         usuario.getMovimientoStocks().add(movimientoStock);
     }

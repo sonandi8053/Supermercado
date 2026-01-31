@@ -54,8 +54,4 @@ public class DetallesPedidoServiceImpl implements DetallesPedidoService {
         return dtos;
     }
 
-    @Override
-    public Integer calcularSubTotal(Long idDetallePedido) {
-        return 0;
-    }
 }

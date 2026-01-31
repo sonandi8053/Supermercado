@@ -49,7 +49,7 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuario.setContraseniaHash(contraseniaHash);
         usuario.setFecha_nac(dto.getFecha_nac());
         usuario.setRol(dto.getRol());
-        usuario.setEs_activo(true);
+        usuario.setEsActivo(true);
         usuarioRepository.save(usuario);
         return usuarioMapper.toDTO(usuario);
     }
@@ -63,6 +63,7 @@ public class UsuarioServiceImpl implements UsuarioService {
         String contraseniaHash = passwordEncoder.encode(dto.getContrasenia());
         usuario.setContraseniaHash(contraseniaHash);
         usuario.setEmail(dto.getEmail());
+        usuarioRepository.save(usuario);
     }
 
     @Override

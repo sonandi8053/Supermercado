@@ -8,22 +8,11 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-01-28T22:01:15-0300",
+    date = "2026-01-29T19:24:10-0300",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.8 (Microsoft)"
 )
 @Component
 public class UsuarioMapperImpl implements UsuarioMapper {
-
-    @Override
-    public UsuarioResponseDTO toDTO(Usuario usuario) {
-        if ( usuario == null ) {
-            return null;
-        }
-
-        UsuarioResponseDTO usuarioResponseDTO = new UsuarioResponseDTO();
-
-        return usuarioResponseDTO;
-    }
 
     @Override
     public Usuario toEntity(UsuarioRequestDTO dto) {
@@ -39,5 +28,23 @@ public class UsuarioMapperImpl implements UsuarioMapper {
         usuario.setRol( dto.getRol() );
 
         return usuario;
+    }
+
+    @Override
+    public UsuarioResponseDTO toDTO(Usuario usuario) {
+        if ( usuario == null ) {
+            return null;
+        }
+
+        UsuarioResponseDTO usuarioResponseDTO = new UsuarioResponseDTO();
+
+        usuarioResponseDTO.setId( usuario.getId() );
+        usuarioResponseDTO.setNombre( usuario.getNombre() );
+        usuarioResponseDTO.setEmail( usuario.getEmail() );
+        usuarioResponseDTO.setEsActivo( usuario.getEsActivo() );
+        usuarioResponseDTO.setFecha_nac( usuario.getFecha_nac() );
+        usuarioResponseDTO.setRol( usuario.getRol() );
+
+        return usuarioResponseDTO;
     }
 }

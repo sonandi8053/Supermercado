@@ -17,19 +17,19 @@ public class ProductoController {
     @Autowired
     private ProductoService productoService;
 
-    @PostMapping
+    @PostMapping("/crear")
     public ResponseEntity<ProductoResponseDTO> crearProducto(@RequestBody ProductoRequestDTO dto) {
         ProductoResponseDTO productoCreado = productoService.crearProducto(dto);
         return new ResponseEntity<>(productoCreado, HttpStatus.CREATED);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/editar/{id}")
     public ResponseEntity<Void> editarProducto(@PathVariable Long id, @RequestBody ProductoRequestDTO dto) {
         productoService.editarProducto(id, dto);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping("/mostrar")
     public ResponseEntity<List<ProductoResponseDTO>> listarProductos() {
         List<ProductoResponseDTO> productos = productoService.listarProductos();
         return new ResponseEntity<>(productos, HttpStatus.OK);

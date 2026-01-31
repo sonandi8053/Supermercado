@@ -26,7 +26,7 @@ public class Usuario {
     private String email;
     @Column(nullable = false)
     private String contraseniaHash;
-    private Boolean es_activo;
+    private Boolean esActivo;
     private LocalDate fecha_nac;
     private Rol rol;
 

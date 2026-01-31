@@ -8,6 +8,11 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface UsuarioMapper {
-    UsuarioResponseDTO toDTO(Usuario usuario);
+    @Mapping(target = "pedidos", ignore = true)
+    @Mapping(target = "movimientoStocks", ignore = true)
+    @Mapping(target = "reposiciones", ignore = true)
+    @Mapping(target = "contraseniaHash", ignore = true)
     Usuario toEntity(UsuarioRequestDTO dto);
+    UsuarioResponseDTO toDTO(Usuario usuario);
+
 }

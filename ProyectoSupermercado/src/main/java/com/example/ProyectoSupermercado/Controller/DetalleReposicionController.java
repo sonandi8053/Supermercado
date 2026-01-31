@@ -18,12 +18,6 @@ public class DetalleReposicionController {
     @Autowired
     private DetallesReposicionService detallesReposicionService;
 
-    @PostMapping
-    public ResponseEntity<Void> crear(@RequestBody DetallesReposicionRequestDTO dto) {
-        detallesReposicionService.crear(dto);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
-    }
-
     @GetMapping("/reposicion/{idReposicion}")
     public ResponseEntity<List<DetallesReposicionResponseDTO>> obtenerDetallesPorReposicion(@PathVariable Long idReposicion) {
         List<DetallesReposicionResponseDTO> detalles = detallesReposicionService.obtenerDetallesPorReposicion(idReposicion);

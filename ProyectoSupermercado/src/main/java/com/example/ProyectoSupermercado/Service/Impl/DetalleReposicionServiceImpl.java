@@ -5,6 +5,7 @@ import com.example.ProyectoSupermercado.DTO.Response.DetallesReposicionResponseD
 import com.example.ProyectoSupermercado.Entity.DetalleReposicion;
 import com.example.ProyectoSupermercado.Entity.Producto;
 import com.example.ProyectoSupermercado.Entity.Reposicion;
+import com.example.ProyectoSupermercado.Entity.Usuario;
 import com.example.ProyectoSupermercado.Exception.Producto.ProductoNoExisteException;
 import com.example.ProyectoSupermercado.Exception.Reposicion.ReposicionNoExisteException;
 import com.example.ProyectoSupermercado.Mapper.DetalleReposicionMapper;
@@ -32,12 +33,15 @@ public class DetalleReposicionServiceImpl implements DetallesReposicionService {
     @Autowired
     private DetalleReposicionMapper detalleReposicionMapper;
     @Override
-    public void crear(DetallesReposicionRequestDTO dto) {
+    public void crear(DetallesReposicionRequestDTO dto, Reposicion reposicion) {
         DetalleReposicion detalleReposicion = detalleReposicionMapper.toEntity(dto);
-        Reposicion reposicion = reposicionRepository.findById(dto.getIdReposicion()).orElseThrow(()-> new ReposicionNoExisteException("La reposicion no existe."));
+        detalleReposicion.setReposicion(reposicion);
         Producto producto = productoRepository.findById(dto.getIdProducto()).orElseThrow(()-> new ProductoNoExisteException("El producto no existe."));
-        reposicion.getDetallesReposicion().add(detalleReposicion);
+        detalleReposicion.setProducto(producto);
+        detalleReposicionRepository.save(detalleReposicion);
         producto.getDetallesReposicion().add(detalleReposicion);
+        reposicion.getDetallesReposicion().add(detalleReposicion);
+
     }
 
     @Override

@@ -5,6 +5,7 @@ import com.example.ProyectoSupermercado.DTO.Request.ReposicionRequestDTO;
 import com.example.ProyectoSupermercado.DTO.Response.ReposicionResponseDTO;
 import com.example.ProyectoSupermercado.Entity.DetalleReposicion;
 import com.example.ProyectoSupermercado.Entity.Reposicion;
+import com.example.ProyectoSupermercado.Entity.Usuario;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-01-28T22:01:14-0300",
+    date = "2026-01-30T18:42:48-0300",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.8 (Microsoft)"
 )
 @Component
@@ -25,6 +26,11 @@ public class ReposicionMapperImpl implements ReposicionMapper {
         }
 
         ReposicionResponseDTO reposicionResponseDTO = new ReposicionResponseDTO();
+
+        reposicionResponseDTO.setIdUsuario( reposicionUsuarioId( reposicion ) );
+        reposicionResponseDTO.setId( reposicion.getId() );
+        reposicionResponseDTO.setFecha( reposicion.getFecha() );
+        reposicionResponseDTO.setEstado( reposicion.getEstado() );
 
         return reposicionResponseDTO;
     }
@@ -42,6 +48,21 @@ public class ReposicionMapperImpl implements ReposicionMapper {
         reposicion.setDetallesReposicion( detallesReposicionRequestDTOListToDetalleReposicionList( dto.getDetallesReposicion() ) );
 
         return reposicion;
+    }
+
+    private Long reposicionUsuarioId(Reposicion reposicion) {
+        if ( reposicion == null ) {
+            return null;
+        }
+        Usuario usuario = reposicion.getUsuario();
+        if ( usuario == null ) {
+            return null;
+        }
+        Long id = usuario.getId();
+        if ( id == null ) {
+            return null;
+        }
+        return id;
     }
 
     protected DetalleReposicion detallesReposicionRequestDTOToDetalleReposicion(DetallesReposicionRequestDTO detallesReposicionRequestDTO) {

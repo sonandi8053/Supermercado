@@ -17,7 +17,7 @@ public class ReposicionController {
     @Autowired
     private ReposicionService reposicionService;
 
-    @PostMapping
+    @PostMapping ("/crear")
     public ResponseEntity<ReposicionResponseDTO> crear(@RequestBody ReposicionRequestDTO dto) {
         ReposicionResponseDTO reposicionCreada = reposicionService.crear(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body(reposicionCreada);
@@ -29,7 +29,7 @@ public class ReposicionController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping
+    @GetMapping ("/mostrar")
     public ResponseEntity<List<ReposicionResponseDTO>> verReposiciones() {
         List<ReposicionResponseDTO> reposiciones = reposicionService.verReposiciones();
         return ResponseEntity.ok(reposiciones);

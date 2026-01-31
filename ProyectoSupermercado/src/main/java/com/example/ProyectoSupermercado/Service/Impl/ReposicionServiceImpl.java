@@ -1,5 +1,6 @@
 package com.example.ProyectoSupermercado.Service.Impl;
 
+import com.example.ProyectoSupermercado.DTO.Request.DetallesReposicionRequestDTO;
 import com.example.ProyectoSupermercado.DTO.Request.ReposicionRequestDTO;
 import com.example.ProyectoSupermercado.DTO.Response.ReposicionResponseDTO;
 import com.example.ProyectoSupermercado.Entity.Enums.EstadoReposicion;
@@ -10,6 +11,7 @@ import com.example.ProyectoSupermercado.Exception.Usuario.UsuarioNoExisteExcepti
 import com.example.ProyectoSupermercado.Mapper.ReposicionMapper;
 import com.example.ProyectoSupermercado.Repository.ReposicionRepository;
 import com.example.ProyectoSupermercado.Repository.UsuarioRepository;
+import com.example.ProyectoSupermercado.Service.Interfaces.DetallesReposicionService;
 import com.example.ProyectoSupermercado.Service.Interfaces.ReposicionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,9 +29,22 @@ public class ReposicionServiceImpl implements ReposicionService {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
+
+    @Autowired
+    private DetallesReposicionService detallesReposicionService;
+
     @Override
     public ReposicionResponseDTO crear(ReposicionRequestDTO dto) {
-        Reposicion reposicion = reposicionMapper.toEntity(dto);
+        Reposicion reposicion = new Reposicion();
+        reposicion.setFecha(dto.getFecha());
+        reposicion.setEstado(dto.getEstado());
+        Usuario usuario = usuarioRepository.findById(dto.getIdUsuario()).orElseThrow(()-> new UsuarioNoExisteException("El usuario no existe."));
+        reposicion.setUsuario(usuario);
+        reposicionRepository.save(reposicion);
+        for (DetallesReposicionRequestDTO dto1: dto.getDetallesReposicion()){
+            detallesReposicionService.crear(dto1, reposicion);
+        }
+        reposicionRepository.save(reposicion);
         return reposicionMapper.toDTO(reposicion);
     }
 

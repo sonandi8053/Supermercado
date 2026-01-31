@@ -17,7 +17,7 @@ public class PedidoController {
     @Autowired
     private PedidoService pedidoService;
 
-    @PostMapping
+    @PostMapping("/crear")
     public ResponseEntity<PedidoResponseDTO> crearPedido(@RequestBody PedidoRequestDTO dto) {
         PedidoResponseDTO pedidoCreado = pedidoService.crearPedido(dto);
         return new ResponseEntity<>(pedidoCreado, HttpStatus.CREATED);
@@ -35,7 +35,7 @@ public class PedidoController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping("/mostrar")
     public ResponseEntity<List<PedidoResponseDTO>> verTodosLosPedidos() {
         List<PedidoResponseDTO> pedidos = pedidoService.verTodosLosPedidos();
         return new ResponseEntity<>(pedidos, HttpStatus.OK);

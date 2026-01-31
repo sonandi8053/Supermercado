@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-01-28T22:01:15-0300",
+    date = "2026-01-29T19:24:11-0300",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21.0.8 (Microsoft)"
 )
 @Component
@@ -21,6 +21,9 @@ public class StockMapperImpl implements StockMapper {
         }
 
         StockResponseDTO stockResponseDTO = new StockResponseDTO();
+
+        stockResponseDTO.setId( stock.getId() );
+        stockResponseDTO.setCantidadTotal( stock.getCantidadTotal() );
 
         return stockResponseDTO;
     }
